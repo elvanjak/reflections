@@ -4,4 +4,21 @@ What happens when you initialize a repository? Why do you need to do it?
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
-Staging are gives list of files where changes should be committed and also the list of untracked files. Working directory has last checkouted files, but repository included all others info necessary for git service. 
+Staging area gives list of files where changes should be committed and also the list of untracked files. Working directory has last checkouted files, but repository included all others info necessary for git service with a list of all commits. 
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+Firstly with git diff you can get list of files that are modified but they are not in stagin area. You can add them to staging area by using command git add file. Then you can use git diff --staged and get differences between staging area and most recent commit in repository. If there is any difference you shoud add that file to staging area. If there is not any difference then you should commit files in staging area as one logical change. 
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+You can use it to make different versions of your application, or for experimentation purpose. 
+
+How do the diagrams help you visualize the branch structure?
+
+tree structure of diagram from last commits to inital ones through branches visualize commits and their parents, so it is esy to pass through it.
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+you will get new commit with two parents which are last commits at two braches. all commits remains but they are sorted by timestap. git show commit id will show update of that commit. after that step you could use git command git branch -d name of branch to delete it, butits commits stays in a new merged branch.
+
+git auto merging conflict find
